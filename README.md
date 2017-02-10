@@ -25,7 +25,7 @@ First, you need to register your application on MunicConnect. [Here](https://con
 * Name                : Name of your application
 * Private             : If yes, MunicConnect User must be approved (by you) before be abble to sign in your application; else, any MunicConnect User can sign in.
 * Authorized users    : If your application is private, this allow you to authorize users to acces your application.
-* Redirect uri        : After successfull sign in on MunicConnect, customer will be redirected on your application. E.g. '[yoursite]/auth/munic/callback'. (You will re-use it [here](#Routes).)
+* Redirect uri        : After successfull sign in on MunicConnect, customer will be redirected on your application. E.g. '[yoursite]/auth/munic/callback'. (You will re-use it [here](#routes).)
 
 ### Set Application uid and Secret
 [Applications](https://connect.munic.io/oauth/applications) is listing all your applications. By clicking on the name of an application, you can get information about it, especially two strings of 64 hexadecimal characters long : "Application" and "Secret". _DO NOT_ share this credentials !
@@ -37,7 +37,7 @@ Put them in `config/initializers/omniauth.rb` like so :
     end
 
 ### Routes
-In `config/routes.rb`, you must `get` the [redirect uri](#register-your-application-on-MunicConnect) and trigger an action.
+In `config/routes.rb`, you must `get` the [redirect uri](#register-your-application-on-municconnect) and trigger an action.
 
 Basically you will need to create a session on your site :
 
@@ -89,7 +89,7 @@ In your Session Controller add the following line :
 ## Usage
 
 ### User's information
-You can get user's information when [creating a session](#Session-Controller) with this line :
+You can get user's information when [creating a session](#session-controller) with this line :
 
     auth = request.env["omniauth.auth"]
     auth["info"]
