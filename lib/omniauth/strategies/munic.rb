@@ -25,7 +25,7 @@ module OmniAuth
                     organization_id: raw_info['organization_id']
                 }
                 i[:time_zone] = raw_info['time_zone'] unless raw_info['time_zone'].nil?
-                i[:company] = raw_info['company'] unless raw_info['company'].nil?
+                i[:company_name] = raw_info['company_name'] unless raw_info['company_name'].nil?
                 i
             end
 

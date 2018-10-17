@@ -69,7 +69,7 @@ RSpec.describe OmniAuth::Strategies::Munic do
             'email' => 'robert.tulali@yoyo.com',
             'language' => 'english',
             'organization_id' => 5,
-            'company' => 'Holiday',
+            'company_name' => 'Roberto Compnay',
             'time_zone' => 'London'
           }
         }
@@ -78,7 +78,7 @@ RSpec.describe OmniAuth::Strategies::Munic do
             email: response_params['email'],
             full_name: response_params['full_name'],
             language: response_params['language'],
-            company: response_params['company'],
+            company_name: response_params['company_name'],
             organization_id: response_params['organization_id'],
             time_zone: response_params['time_zone']
           }
