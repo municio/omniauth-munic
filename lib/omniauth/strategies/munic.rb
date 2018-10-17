@@ -26,7 +26,6 @@ module OmniAuth
                 }
                 i[:time_zone] = raw_info['time_zone'] unless raw_info['time_zone'].nil?
                 i[:company] = raw_info['company'] unless raw_info['company'].nil?
-                i[:vat] = raw_info['vat'] unless raw_info['vat'].nil?
                 i
             end
 
