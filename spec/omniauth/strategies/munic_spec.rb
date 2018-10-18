@@ -27,7 +27,9 @@ RSpec.describe OmniAuth::Strategies::Munic do
         'uid' => 'fd907347-67c9-4c0c-9452-bffc1d06a4af',
         'full_name' => 'Robert Tulali',
         'email' => 'robert.tulali@yoyo.com',
-        'language' => 'english'
+        'language' => 'english',
+        'organization_id' => '5',
+        'organization_name' => 'Roberto Company'
       }
     }
 
@@ -52,7 +54,8 @@ RSpec.describe OmniAuth::Strategies::Munic do
           {
             email: response_params['email'],
             full_name: response_params['full_name'],
-            language: response_params['language']
+            language: response_params['language'],
+            organization_id: response_params['organization_id']
           }
         }
 
@@ -66,8 +69,9 @@ RSpec.describe OmniAuth::Strategies::Munic do
             'full_name' => 'Robert Tulali',
             'email' => 'robert.tulali@yoyo.com',
             'language' => 'english',
-            'vat' => '1.3',
-            'company' => 'Holiday',
+            'organization_id' => '5',
+            'organization_name' => 'Roberto Company',
+            'company_name' => 'Roberto Company',
             'time_zone' => 'London'
           }
         }
@@ -76,8 +80,8 @@ RSpec.describe OmniAuth::Strategies::Munic do
             email: response_params['email'],
             full_name: response_params['full_name'],
             language: response_params['language'],
-            vat: response_params['vat'],
-            company: response_params['company'],
+            company_name: response_params['company_name'],
+            organization_id: response_params['organization_id'],
             time_zone: response_params['time_zone']
           }
         }

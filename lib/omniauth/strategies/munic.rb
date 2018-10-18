@@ -21,11 +21,12 @@ module OmniAuth
                 i = {
                     email: raw_info['email'],
                     full_name: raw_info['full_name'],
-                    language: raw_info['language']
+                    language: raw_info['language'],
+                    organization_id: raw_info['organization_id'],
+                    organization_name: raw_info['organization_name']
                 }
                 i[:time_zone] = raw_info['time_zone'] unless raw_info['time_zone'].nil?
-                i[:company] = raw_info['company'] unless raw_info['company'].nil?
-                i[:vat] = raw_info['vat'] unless raw_info['vat'].nil?
+                i[:company_name] = raw_info['company_name'] unless raw_info['company_name'].nil?
                 i
             end
 
