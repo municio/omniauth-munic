@@ -29,6 +29,7 @@ RSpec.describe OmniAuth::Strategies::Munic do
         'email' => 'robert.tulali@yoyo.com',
         'language' => 'english',
         'organization_id' => '5',
+        'organization_name' => 'Roberto Company'
       }
     }
 
@@ -69,7 +70,8 @@ RSpec.describe OmniAuth::Strategies::Munic do
             'email' => 'robert.tulali@yoyo.com',
             'language' => 'english',
             'organization_id' => '5',
-            'company_name' => 'Roberto Compnay',
+            'organization_name' => 'Roberto Company',
+            'company_name' => 'Roberto Company',
             'time_zone' => 'London'
           }
         }
