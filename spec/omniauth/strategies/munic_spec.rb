@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe OmniAuth::Strategies::Munic do
@@ -12,14 +14,13 @@ RSpec.describe OmniAuth::Strategies::Munic do
     allow(subject).to receive(:access_token) { access_token }
   end
 
-   context 'provider name' do
+  context 'provider name' do
     it { expect(subject.options.name).to eq('munic') }
   end
 
   context 'client options' do
     it { expect(subject.options.client_options.site).to eq('https://connect.munic.io') }
   end
-
 
   context 'auth params' do
     let(:response_params) {
