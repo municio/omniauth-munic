@@ -7,23 +7,22 @@ require 'omniauth-munic/version'
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-munic'
   spec.version       = OmniAuth::Munic::VERSION
-  spec.authors       = ['maxime dufay']
-  spec.email         = ['maxime.dufay@mobile-devices.fr']
 
   spec.description   = 'Munic.io OAuth2 strategy for OmniAuth.'
   spec.summary       = spec.description
+
+  spec.authors       = ['maxime dufay']
+  spec.email         = ['maxime.dufay@mobile-devices.fr']
   spec.homepage      = 'https://github.com/municio/omniauth-munic'
   spec.license       = 'MIT'
+
+  spec.add_dependency 'omniauth-oauth2', '~> 1.6.0'
+
+  spec.add_development_dependency 'rake', '>= 12.3.3'
+  spec.add_development_dependency 'rspec', '~> 3.8', '>= 3.8.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
-
-  spec.add_dependency 'omniauth-oauth2', '~> 1.6.0'
-
-  spec.add_development_dependency 'bundler', '~> 1.9'
-  spec.add_development_dependency 'omniauth-oauth2', '~> 1.6.0'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.5', '>= 3.5.0'
 end
