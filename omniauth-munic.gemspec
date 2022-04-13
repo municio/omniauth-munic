@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/municio/omniauth-munic'
   spec.license       = 'MIT'
 
-  spec.add_dependency 'omniauth-oauth2', '~> 1.6.0'
+  spec.add_dependency 'omniauth-oauth2', '~> 1.7.0'
 
   spec.add_development_dependency 'rake', '>= 12.3.3'
   spec.add_development_dependency 'rspec', '~> 3.8', '>= 3.8.0'
