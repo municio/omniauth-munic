@@ -16,9 +16,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/municio/omniauth-munic'
   spec.license       = 'MIT'
 
-  spec.add_dependency 'omniauth-oauth2', '~> 1.7.0'
+  spec.add_runtime_dependency 'omniauth-oauth2', '~> 1.7', '>= 1.7.0'
 
-  spec.add_development_dependency 'rake', '>= 12.3.3'
+  spec.add_development_dependency 'rake', '~> 12.3', '>= 12.3.3'
   spec.add_development_dependency 'rspec', '~> 3.8', '>= 3.8.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
